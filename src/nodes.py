@@ -1,5 +1,8 @@
 
 import platform
+import shutil
+
+import network
 
 # NETWORKED DEVICE
 class Node:
@@ -11,9 +14,5 @@ class WindowsNode(Node):
 	def __init__(self):
 		self.desktop = "C:\\Users\\SPS\\Desktop"
 
-	def install_vlc(self):
-		pass
-
-	def update_handbrake(self):
-		pass
-
+	def copy_desktop(self, exe_name):
+		shutil.copy(self.desktop, network.exe_dict)
